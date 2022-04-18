@@ -1,0 +1,21 @@
+<div class="caixa row conteiner">
+  <div class="col-2">
+    <img src="{{ game.imagem_ilustrativa }}" alt="" />
+  </div>
+  <div class="col">
+    <h2>{{ game.nome }}</h2>
+    <p>{{ game.descricao }}</p>
+    <b>Categoria: </b><span>{{ game.categoria?.nome }}</span>
+    <p>
+      <div class="chip" *ngFor="let tag of tags">{{tag}}</div>
+    <a
+      ><p>
+        <button>Jogue agora!</button>
+      </p></a
+    >
+  </div>
+  <div class="col-2">
+    <button ><i class="pi pi-pencil"></i>EDITAR</button>
+    <button (click)="apagarGame()"><i class="pi pi-trash"></i>APAGAR</button>
+  </div>
+</div>
