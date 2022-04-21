@@ -4,8 +4,9 @@ import { CadastroGameComponent } from './pages/cadastro-game/cadastro-game.compo
 import { ListaGamesComponent } from './pages/lista-games/lista-games.component';
 
 const routes: Routes = [
-  { path: 'listagames', component: ListaGamesComponent },
-  { path: 'cadastro/game', component: CadastroGameComponent }
+  { path: 'games/lista', component: ListaGamesComponent },
+  { path: 'games/cadastro', component: CadastroGameComponent },
+  { path: 'games/cadastro/:id', component: CadastroGameComponent }
 
 ];
 

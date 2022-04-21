@@ -1,4 +1,7 @@
 <h1>Games</h1>
+<div>
+  <button	 class="p-button" routerLink="../cadastro">Novo Game</button>
+</div>
 <div *ngFor="let game of games">
   <app-lista-games-item [game]=game [games]=games></app-lista-games-item>
 </div>

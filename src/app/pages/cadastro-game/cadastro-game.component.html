@@ -1,9 +1,38 @@
-<h1>Cadastro Game</h1>
-<form id="formCadastroGame"  method="post" enctype="multipart/form-data">
-  <div>
-    <label for="inputNome">Nome:</label>
-    <input type="text" id="inputNome" name="inputNome">
-  </div>
-
-  <input type="submit">
-</form>
+<div class="container caixa">
+  <h1>Cadastro Game</h1>
+  <form id="formCadastroGame" method="post" enctype="multipart/form-data" (ngSubmit)="addOrUpdateGame()">
+    <div class="row">
+      <label for="nome">Nome:</label>
+      <input pInputText  class="p-inputtext" type="text" id="nome" name="nome" [(ngModel)]="game.nome" class="col-12"/>
+    </div>
+    <div class="row">
+      <label for="url_acesso">Url de acesso:</label>
+      <input pInputText  class="p-inputtext" type="text" id="url_acesso" name="url_acesso" [(ngModel)]="game.url_acesso" class="col-12"/>
+    </div>
+    <div class="row">
+      <label for="url_video">Url de video:</label>
+      <input pInputText  class="p-inputtext" type="text" id="url_video" name="url_video" [(ngModel)]="game.url_video" class="col-12"/>
+    </div>
+    <div class="row">
+      <label for="descricao">Descrição:</label>
+      <textarea pInputTextarea class="p-inputtextarea" name="descricao" id="descricao" [(ngModel)]="game.descricao"></textarea>
+    </div>
+    <div class="row">
+      <label for="imagem_ilustrativa">Imagem ilustrativa:</label>
+      <p-fileUpload [fileLimit]="1" accept="image/*" [auto]="true" name="imagem_ilustrativa" [customUpload]="true" (uploadHandler)="myUploader($event)"></p-fileUpload>
+      <img src={{game.imagem_ilustrativa}} alt="">
+    </div>
+    <div class="row">
+      <label for="categoria">Categoria:</label>
+      <select name="categoria" id="categoria" [(ngModel)]="game.id_categoria" class="p-dropdown">
+        <option *ngFor="let categoria of categorias" value={{categoria.id}}>{{categoria.nome}}</option>
+      </select>
+    </div>
+    <div class="row">
+      <p-chips class="col-12" name="tags" [(ngModel)]="tags" ></p-chips>
+    </div>
+    <div class="">
+      <input class="p-button" type="submit" />
+    </div>
+  </form>
+</div>

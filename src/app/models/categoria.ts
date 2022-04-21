@@ -4,3 +4,5 @@ export interface Categoria {
   createdAt?: Date;
   updatedAt?: Date;
 }
+
+export type Categorias = Array<Categoria>

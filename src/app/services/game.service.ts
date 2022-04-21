@@ -30,7 +30,7 @@ export class GameService {
 
   updateGame(game: Game): Observable<Object> {
     return this.http.post(
-      environment.BACKEND_HOST + 'game/id' + game.id,
+      environment.BACKEND_HOST + 'game/id/' + game.id,
       game,
       {
         responseType: 'json',

@@ -9,6 +9,7 @@ import { CadastroGameComponent } from './pages/cadastro-game/cadastro-game.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ChipsModule } from 'primeng/chips';
 import { FormsModule } from '@angular/forms';
+import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     ChipsModule,
     FormsModule,
+    FileUploadModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

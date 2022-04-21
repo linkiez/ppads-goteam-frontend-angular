@@ -10,12 +10,12 @@
       <div class="chip" *ngFor="let tag of tags">{{tag}}</div>
     <a
       ><p>
-        <button>Jogue agora!</button>
+        <button class="p-button">Jogue agora!</button>
       </p></a
     >
   </div>
   <div class="col-2">
-    <button ><i class="pi pi-pencil"></i>EDITAR</button>
-    <button (click)="apagarGame()"><i class="pi pi-trash"></i>APAGAR</button>
+    <button class="p-button" routerLink="../cadastro/{{game.id}}"><i class="pi pi-pencil"></i>EDITAR</button>
+    <button class="p-button" (click)="apagarGame()"><i class="pi pi-trash"></i>APAGAR</button>
   </div>
 </div>
